@@ -1,0 +1,73 @@
+img {
+    width: 640px;
+}
+.mateo-section {
+    width: 100%;
+}
+
+
+
+/* CSS assignment */
+
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 18px;
+}
+
+header, footer{
+    background-color: rgb(201, 209, 252);
+    padding: 5px;
+}
+
+.site-title{
+    color: rgb(189, 19, 64);
+    text-align: center;
+}
+
+#my-image{
+    box-shadow: 0 1px 2px #000;
+}
+
+.hobbies{
+    list-style: square;
+}
+
+ul.hobbies :nth-child(odd) {
+    background-color: cornflowerblue;
+  }
+
+.nav-links{
+    list-style: none;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: #042845;
+    border: 1px solid rgb(43, 253, 211);;
+}
+
+.nav-links a:hover{
+    background-color: rgb(43, 253, 211);
+    color: #fff;
+    
+}
+
+.about-me{
+    color: rgb(239, 204, 32);
+}
+
+.green-mateo, .hobbies-section{
+    color: lightseagreen;
+}
+
+.tags-section{
+    color: rgb(155, 165, 16);
+}
+
+.mateo-section p{
+    padding-left: 20px;
+}
+
+h5{
+    text-align: right;
+}
