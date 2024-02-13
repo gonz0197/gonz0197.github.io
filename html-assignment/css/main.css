@@ -54,10 +54,6 @@ header, footer{
     color: rgb(155, 165, 16);
 }
 
-.mateo-section p{
-    padding-left: 20px;
-}
-
 h5{
     text-align: right;
 }
@@ -67,4 +63,15 @@ img {
 }
 .mateo-section {
     width: 100%;
+}
+
+.divTable{
+	display: table;
+	width: 100%;
+}
+
+.divTableCell {
+	display: table-cell;
+	padding: 0 10px 0 0;
+	vertical-align: middle;
 }
