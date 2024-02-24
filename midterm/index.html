@@ -9,18 +9,22 @@
 </head>
 
 <body>
+    <!-- div with wrapper class to add a different background color -->
+    <div class="wrapper">
     <!-- header with nav inside and text overlaid on image -->
     <header>
-        <img src="images/lone-starfish-wide.jpg" alt="">
-        <h1>Lone Starfish</h1>
-
+        <div class="container-title">
+            <img src="images/lone-starfish-wide.jpg" alt="">
+            <h1>Lone Starfish</h1>
+        </div>
+    
         <!-- nav section with three nav links: home, story and contact-->
         <nav>
-            <div class="nav-links">
-                <div><a href="index.html">Home</a></div>
-                <div><a href="#story">Story</a></div>
-                <div><a href="#contact">Contact</a></div>
-            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#story">Story</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </nav>
     </header>
     <!-- main content starts-->
@@ -35,35 +39,40 @@
         </article>
         <!-- section with header and ul facts-->
         <section>
-            <h3>Facts About Starfish</h3>
-            <ul>
+            <h2>Facts About Starfish</h2>
+            <ul class="facts">
                 <li>Australian herring barbel Mexican golden trout, killifish bonito; northern anchovy.</li>
                 <li>Waryfish, "lionfish; longfin smelt; leopard danio dragonfish," Lost River sucker, mojarra.</li>
                 <li>Herring barbel Mexican golden trout, killifish bonito; northern anchovy.</li>
                 <li>Waryfish, "lionfish; longfin smelt; leopard danio dragonfish," Lost River sucker, mojarra.</li>
             </ul>
-        </section>
         <!-- form input section -->
-        <section>
-            <h3 id="contact">Contact to Learn More</h3>
-            <div class="contact">
-                <form action="index.html" method="get">
-                    <div>
-                        <label for="fullname">Your Name</label>
-                        <input id="fullname" type="text" name="fname">
-                    </div>
-                    <div>
-                        <label for="email">Your Email</label>
-                        <textarea id="email" name="email"></textarea>
-                    </div>
-
+        <h2 id="contact">Contact to Learn More</h2>
+            <div class="contact-box">
+                <div class="contact">
+                    <form action="index.html" method="post">
+                        <div>
+                            <label for="fullname">Your Name</label>
+                            <input id="fullname" type="text" name="fname">
+                        </div>
+                        <div>
+                            <label for="email">Your Email</label>
+                            <textarea id="email" name="email"></textarea>
+                        </div>
+                        <div>
+                            <label for="message">Your Message</label>
+                            <input id="message" type="text" name="message">
+                        </div>
+                </div>
             </div>
+            
         </section>
 
 
     </main>
     <footer>
-        <p>&copy; Lone Starfish</p>
+        <p>&copy; Lone Starfish.</p>
     </footer>
+</div>
 </body>
 </html>
