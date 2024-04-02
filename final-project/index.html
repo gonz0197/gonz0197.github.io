@@ -6,23 +6,100 @@
     <title>Final Project</title>
 </head>
 <body>
-    <div class="container">
-        <div class="aboutus">
-            <div class="wrapper"> wrapper only has center y width
-        
+    <!-- This container has the extended content -->
+    <div class="container-extended">
+        <!-- img, nav and form - 100% mobile has 1 column and in desktop uses flex at breakpoint. Padding sides at 10px mobile,  -->
+        <header class="nav">
+            <img src="images/logo.png" alt="logo image">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#aboutus">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <!-- form at 100% mobile -->
+        </header>
+        <!-- image background with a black block at 50% oppacity with white h1, text and a yellow button overlaid on image -->
+        <!-- black block at 100% width mobile and padding at desktop -->
+        <div class="welcome">
+            <div class="wrapper-welcome">
+                <img src="images/main-banner.jpg" alt="">
+                <div class="blackblock">
+                    <h1>Welcome to Three Star Media</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quo ipsa voluptates officiis atque ullam recusandae, sapiente, non iste explicabo magnam numquam, dolorem molestiae placeat esse aliquam distinctio corrupti et?</p>
+                    <div class="yellow-btn">
+                        <p><a href="#">Connect with us &#x25BA;</a></p>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="ourvision">
+        <!-- yellow block stacked at mobile and uses flex for desktop. Mobile image at 100% and desktop the image is left floating -->
+        <div class="aboutus" id="aboutus">
+            <div class="wrapper">
+                <img src="images/about-us.jpg" alt="">
+                <h2>About Us</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus ad ex aliquid labore recusandae expedita eaque nam, totam ab ullam! Rem quo ex, nisi consectetur error officia dicta sapiente mollitia?</p>
+            </div>
+        </div>
+    </div>
+<!-- This container has the content with padding in desktop version -->
+    <div class="container-padding">
+       <div class="ourservices" id="services">
+        <!-- div table with two columns in dekstop and 1 column for mobile -->
+            <div class="services-twoC">
+                <div class="digital-transformation">
+                    <img src="images/digital.jpg" alt="">
+                    <h3>Digital Transformation</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste debitis distinctio exercitationem nesciunt non repudiandae officiis expedita, accusamus repellat temporibus quaerat quod alias harum, aliquid aperiam ut commodi ex recusandae.</p>
+                    <div class="black-btn">
+                        <p><a href="#">Digital Plans &#x25BA;</a></p>
+                    </div>
+                </div>
+                <div class="marketing">
+                    <img src="images/marketing.jpg" alt="">
+                    <h3>Marketing</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste debitis distinctio exercitationem nesciunt non repudiandae officiis expedita, accusamus repellat temporibus quaerat quod alias harum, aliquid aperiam ut commodi ex recusandae.</p>
+                    <div class="black-btn">
+                        <p><a href="#">Marketing Plans &#x25BA;</a></p>
+                    </div>
+                </div>
+            </div>
+            <!-- second div table with three columns in desktop and 1 stacked column in mobile -->
+            <div class="services-threeC">
+                <div class="video">
+                    <img src="images/video.jpg" alt="">
+                    <h3>Video Production</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste debitis distinctio exercitationem nesciunt non repudiandae officiis expedita, accusamus repellat temporibus quaerat quod alias harum, aliquid aperiam ut commodi ex recusandae.</p>
+                    <div class="black-btn">
+                        <p><a href="#">Video Plans &#x25BA;</a></p>
+                    </div>
+                </div>
+                <div class="webdev">
+                    <img src="images/web.jpg" alt="">
+                    <h3>Web Development</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste debitis distinctio exercitationem nesciunt non repudiandae officiis expedita, accusamus repellat temporibus quaerat quod alias harum, aliquid aperiam ut commodi ex recusandae.</p>
+                    <div class="black-btn">
+                        <p><a href="#">Web Plans &#x25BA;</a></p>
+                    </div>
+                </div>
+                <div class="print">
+                    <img src="images/print.jpg" alt="">
+                    <h3>Print</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste debitis distinctio exercitationem nesciunt non repudiandae officiis expedita, accusamus repellat temporibus quaerat quod alias harum, aliquid aperiam ut commodi ex recusandae.</p>
+                    <div class="black-btn">
+                        <p><a href="#">Print Plans &#x25BA;</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- This container has extended content -->
+    <div class="container-extended">
+        <!-- image background with h3, text and a blue button with a yellow padding -->
+        <div class="ourvision" id="aboutus">
             <div class="wrapper"></div>
         </div>
         
-        </div>
 </body>
 </html>
-
-comments examples
-
-<!-- nav - 1 col at mobile and use flex to put in line at breakpoint-->
-
-classes for diferent butons
-buttons goes to # 
