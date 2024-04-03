@@ -5,15 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Final Project</title>
-
-    <script src="https://kit.fontawesome.com/b0dc56cb43.js" crossorigin="anonymous"></script>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-        rel="stylesheet">
-
-    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
@@ -21,26 +12,29 @@
         <!-- This container has the extended content -->
         <div class="container-extended">
             <!-- img, nav and form - 100% mobile has 1 column and in desktop uses flex at breakpoint. Padding sides at 10px mobile,  -->
-            <header class="nav">
-                <div class="nav-logo">
-                    <img src="images/logo.png" alt="logo image">
+            <header>
+                <div class="nav">
+                    <div class="nav-logo">
+                        <img src="images/logo.png" alt="logo image">
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="#aboutus">About Us</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#team">Team</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <div class="search-container">
+                        <form action="index.html">
+                            <input type="text" placeholder="Search" name="search">
+                            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        </form>
+                    </div>
+                    <!-- form at 100% mobile -->
                 </div>
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="#aboutus">About Us</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#team">Team</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
-                <div class="search-container">
-                    <form action="index.html">
-                        <input type="text" placeholder="Search" name="search">
-                        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-                    </form>
-                </div>
-                <!-- form at 100% mobile -->
+                
             </header>
             <!-- image background with a black block with oppacity containing a white h1, text and a yellow button -->
             <div class="welcome">
@@ -73,8 +67,8 @@
         <div class="container-padding">
             <div class="ourservices" id="services">
                 <h2>Our Services</h2>
-                <!-- div table with two columns in dekstop and 1 column for mobile -->
-                <div class="services-twoc">
+                <!-- div table with six columns. For mobile all the content goes into one column and in desktop uses grid wrap, fir first row has 2 divs and the last row has 3 divs  -->
+                <div class="services">
                     <div class="digital-transformation">
                         <div class="services-img">
                             <img src="images/digital.jpg" alt="">
@@ -103,9 +97,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- second div table with three columns in desktop and 1 stacked column in mobile -->
-                <div class="services-threec">
                     <div class="video">
                         <div class="services-img">
                             <img src="images/video.jpg" alt="">
@@ -154,8 +145,8 @@
         <!-- This container has extended content -->
         <div class="container-extended">
             <!-- image background with h3, text and a blue button with a yellow padding -->
+            <!-- background image for this div -->
             <div class="ourvision">
-                <!-- background image for this div -->
                 <div class="wrapper">
                     <h3 class="white-text">Our Vision</h3>
                     <p class="white-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia adipisci
