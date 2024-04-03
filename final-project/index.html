@@ -1,105 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Final Project</title>
+
+    <script src="https://kit.fontawesome.com/b0dc56cb43.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
-    <!-- This container has the extended content -->
-    <div class="container-extended">
-        <!-- img, nav and form - 100% mobile has 1 column and in desktop uses flex at breakpoint. Padding sides at 10px mobile,  -->
-        <header class="nav">
-            <img src="images/logo.png" alt="logo image">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#aboutus">About Us</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#team">Team</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <!-- form at 100% mobile -->
-        </header>
-        <!-- image background with a black block at 50% oppacity with white h1, text and a yellow button overlaid on image -->
-        <!-- black block at 100% width mobile and padding at desktop -->
-        <div class="welcome">
-            <div class="wrapper-welcome">
-                <img src="images/main-banner.jpg" alt="">
-                <div class="blackblock">
-                    <h1>Welcome to Three Star Media</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quo ipsa voluptates officiis atque ullam recusandae, sapiente, non iste explicabo magnam numquam, dolorem molestiae placeat esse aliquam distinctio corrupti et?</p>
-                    <div class="yellow-btn">
-                        <p><a href="#">Connect with us &#x25BA;</a></p>
+    <div>
+        <!-- This container has the extended content -->
+        <div class="container-extended">
+            <!-- img, nav and form - 100% mobile has 1 column and in desktop uses flex at breakpoint. Padding sides at 10px mobile,  -->
+            <header class="nav">
+                <img src="images/logo.png" alt="logo image">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#aboutus">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#team">Team</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="search-container">
+                    <form action="index.html">
+                        <input type="text" placeholder="Search" name="search">
+                        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                </div>
+                <!-- form at 100% mobile -->
+            </header>
+            <!-- image background with a black block at 7% oppacity with white h1, text and a yellow button overlaid on image -->
+            <!-- black block at 100% width mobile and padding at desktop -->
+            <div class="welcome">
+                <!-- main-banner.jpg with backgound image in CSS -->
+                <div class="wrapper-welcome">
+                    <div class="blackblock">
+                        <h1>Welcome to Three Star Media</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quo ipsa voluptates
+                            officiis atque ullam recusandae, sapiente, non iste explicabo magnam numquam, dolorem
+                            molestiae placeat esse aliquam distinctio corrupti et?</p>
+                        <div class="yellow-btn">
+                            <p><a href="#">Connect with us &#x25BA;</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- yellow block stacked at mobile and uses flex for desktop. Mobile image at 100% and desktop the image is left floating -->
+            <div class="aboutus" id="aboutus">
+                <div class="wrapper">
+                    <img src="images/about-us.jpg" alt="">
+                    <div>
+                        <h2>About Us</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus ad ex aliquid labore
+                            recusandae expedita eaque nam, totam ab ullam! Rem quo ex, nisi consectetur error officia
+                            dicta sapiente mollitia?</p>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- yellow block stacked at mobile and uses flex for desktop. Mobile image at 100% and desktop the image is left floating -->
-        <div class="aboutus" id="aboutus">
-            <div class="wrapper">
-                <img src="images/about-us.jpg" alt="">
-                <h2>About Us</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus ad ex aliquid labore recusandae expedita eaque nam, totam ab ullam! Rem quo ex, nisi consectetur error officia dicta sapiente mollitia?</p>
+        <!-- This container has the content with padding in desktop version -->
+        <div class="container-padding">
+            <div class="ourservices" id="services">
+                <h2>Our Services</h2>
+                <!-- div table with two columns in dekstop and 1 column for mobile -->
+                <div class="services-twoc">
+                    <div class="digital-transformation">
+                        <img src="images/digital.jpg" alt="">
+                        <h3>Digital Transformation</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste debitis distinctio
+                            exercitationem nesciunt non repudiandae officiis expedita, accusamus repellat temporibus
+                            quaerat quod alias harum, aliquid aperiam ut commodi ex recusandae.</p>
+                        <div class="black-btn">
+                            <p><a href="#">Digital Plans &#x25BA;</a></p>
+                        </div>
+                    </div>
+                    <div class="marketing">
+                        <img src="images/marketing.jpg" alt="">
+                        <h3>Marketing</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste debitis distinctio
+                            exercitationem nesciunt non repudiandae officiis expedita, accusamus repellat temporibus
+                            quaerat quod alias harum, aliquid aperiam ut commodi ex recusandae.</p>
+                        <div class="black-btn">
+                            <p><a href="#">Marketing Plans &#x25BA;</a></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- second div table with three columns in desktop and 1 stacked column in mobile -->
+                <div class="services-threec">
+                    <div class="video">
+                        <img src="images/video.jpg" alt="">
+                        <h3>Video Production</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste debitis distinctio
+                            exercitationem nesciunt non repudiandae officiis expedita, accusamus repellat temporibus
+                            quaerat quod alias harum, aliquid aperiam ut commodi ex recusandae.</p>
+                        <div class="black-btn">
+                            <p><a href="#">Video Plans &#x25BA;</a></p>
+                        </div>
+                    </div>
+                    <div class="webdev">
+                        <img src="images/web.jpg" alt="">
+                        <h3>Web Development</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste debitis distinctio
+                            exercitationem nesciunt non repudiandae officiis expedita, accusamus repellat temporibus
+                            quaerat quod alias harum, aliquid aperiam ut commodi ex recusandae.</p>
+                        <div class="black-btn">
+                            <p><a href="#">Web Plans &#x25BA;</a></p>
+                        </div>
+                    </div>
+                    <div class="print">
+                        <img src="images/print.jpg" alt="">
+                        <h3>Print</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste debitis distinctio
+                            exercitationem nesciunt non repudiandae officiis expedita, accusamus repellat temporibus
+                            quaerat quod alias harum, aliquid aperiam ut commodi ex recusandae.</p>
+                        <div class="black-btn">
+                            <p><a href="#">Print Plans &#x25BA;</a></p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+        <!-- This container has extended content -->
+        <div class="container-extended">
+            <!-- image background with h3, text and a blue button with a yellow padding -->
+            <div class="ourvision" id="aboutus">
+                <!-- background image for this div -->
+                <div class="wrapper">
+                    <h3 class="white-text">Our Vision</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia adipisci quisquam perspiciatis
+                        ea quis dolore nostrum, vero at iure magni, minima, eaque beatae ipsam quia tenetur itaque ipsa
+                        sit aut.</p>
+                    <div class="blue-btn">
+                        <p><a href="#">Learn More &#x25BA;</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- This container has the content with padding in desktop version -->
+        <div class="container-padding">
+            <div class="ourteam" id="team">
+                <h2>Our Team</h2>
+                <!-- start of the team section, for mobile is in one single column and for desktop is in two columns, john photo is at the left and bob photo is at the right -->
+                <div class="johntable">
+                    <div class="johnrow">
+                        <img src="images/john.jpg" alt="">
+                    </div>
+                    <div class="johnrow">
+                        <h3>John Doe</h3>
+                        <h4>CEO and Co-owner</h4>
+                        <hr>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor deleniti tempore rem esse
+                            placeat ut fugiat tenetur voluptates dolore debitis! Illo, ad. Vel labore nobis harum
+                            voluptatem, tenetur odio molestias.</p>
+                    </div>
+                </div>
+                <div class="bobtable">
+                    <div class="bobrow">
+                        <img src="images/Bob.jpg" alt="">
+                    </div>
+                    <div class="bobrow">
+                        <h3>Bob Rite</h3>
+                        <h4>CFO and Co-owner</h4>
+                        <hr>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor deleniti tempore rem esse
+                            placeat ut fugiat tenetur voluptates dolore debitis! Illo, ad. Vel labore nobis harum
+                            voluptatem, tenetur odio molestias.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- contact us section, it contains a form, a div table and a google maps, for mobile it is in a single column. for desktop the form and the google maps are in two columns and the div table is at the end at 100%  -->
+            <div class="ourteam" id="contact">
+                <h2>Contact Us</h2>
+                <div class="contactus">
+                    <h3>Send us a message</h3>
+                    <div class="sendmessage">
+                        <form action="index.html" method="get" target="_top">
+                            <div>
+                                <label for="fullname">Full Name</label>
+                                <input id="fullname" type="text" name="name">
+                            </div>
+                            <div>
+                                <label for="email">Email</label>
+                                <input id="email" name="email">
+                            </div>
+                            <div>
+                                <label for="message">Message</label>
+                                <textarea id="message"></textarea>
+                            </div>
+                            <div>
+                                <button type="submit">Send</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="hours">
+                    <h2>Hours of operation</h2>
+                    <table>
+                        <th>
+                        <td>Days</td>
+                        <td>Hours</td>
+                        </th>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <p>Monday - Friday</p>
+                                </td>
+                                <td>
+                                    <p>9 AM - 6 PM</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>Saturday - Sunday</p>
+                                </td>
+                                <td>
+                                    <p>Closed</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="location">
+                    <h2>Location</h2>
+                    <div class="map">
+                        <iframe class="gmap"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22431.555641255676!2d-75.79303452568357!3d45.34993349999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce0718cc4a6ad7%3A0xc6cc467725843e2b!2sAlgonquin%20College%20-%20Ottawa%20Campus!5e0!3m2!1ses-419!2sca!4v1711556852732!5m2!1ses-419!2sca"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer element with a p tag -->
+        <footer>
+            <p>&copy; Copyright Three Star Media, 2020</p>
+            <p>All images are taken from Unsplash</p>
+        </footer>
     </div>
-<!-- This container has the content with padding in desktop version -->
-    <div class="container-padding">
-       <div class="ourservices" id="services">
-        <!-- div table with two columns in dekstop and 1 column for mobile -->
-            <div class="services-twoC">
-                <div class="digital-transformation">
-                    <img src="images/digital.jpg" alt="">
-                    <h3>Digital Transformation</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste debitis distinctio exercitationem nesciunt non repudiandae officiis expedita, accusamus repellat temporibus quaerat quod alias harum, aliquid aperiam ut commodi ex recusandae.</p>
-                    <div class="black-btn">
-                        <p><a href="#">Digital Plans &#x25BA;</a></p>
-                    </div>
-                </div>
-                <div class="marketing">
-                    <img src="images/marketing.jpg" alt="">
-                    <h3>Marketing</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste debitis distinctio exercitationem nesciunt non repudiandae officiis expedita, accusamus repellat temporibus quaerat quod alias harum, aliquid aperiam ut commodi ex recusandae.</p>
-                    <div class="black-btn">
-                        <p><a href="#">Marketing Plans &#x25BA;</a></p>
-                    </div>
-                </div>
-            </div>
-            <!-- second div table with three columns in desktop and 1 stacked column in mobile -->
-            <div class="services-threeC">
-                <div class="video">
-                    <img src="images/video.jpg" alt="">
-                    <h3>Video Production</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste debitis distinctio exercitationem nesciunt non repudiandae officiis expedita, accusamus repellat temporibus quaerat quod alias harum, aliquid aperiam ut commodi ex recusandae.</p>
-                    <div class="black-btn">
-                        <p><a href="#">Video Plans &#x25BA;</a></p>
-                    </div>
-                </div>
-                <div class="webdev">
-                    <img src="images/web.jpg" alt="">
-                    <h3>Web Development</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste debitis distinctio exercitationem nesciunt non repudiandae officiis expedita, accusamus repellat temporibus quaerat quod alias harum, aliquid aperiam ut commodi ex recusandae.</p>
-                    <div class="black-btn">
-                        <p><a href="#">Web Plans &#x25BA;</a></p>
-                    </div>
-                </div>
-                <div class="print">
-                    <img src="images/print.jpg" alt="">
-                    <h3>Print</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste debitis distinctio exercitationem nesciunt non repudiandae officiis expedita, accusamus repellat temporibus quaerat quod alias harum, aliquid aperiam ut commodi ex recusandae.</p>
-                    <div class="black-btn">
-                        <p><a href="#">Print Plans &#x25BA;</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- This container has extended content -->
-    <div class="container-extended">
-        <!-- image background with h3, text and a blue button with a yellow padding -->
-        <div class="ourvision" id="aboutus">
-            <div class="wrapper"></div>
-        </div>
-        
 </body>
+
 </html>
