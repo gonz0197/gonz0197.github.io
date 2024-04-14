@@ -1,5 +1,5 @@
 * {
-    box-sizing: content-box;
+    box-sizing: border-box;
 }
 
 
@@ -18,12 +18,12 @@ h1 {
 
 h2 {
     font-size: 3rem;
-    margin: 20px 0;
+    margin: 0;
 }
 
 h3 {
     font-size: 2rem;
-    margin: 20px 0;
+    margin: 0 0 20px 0;
 }
 
 .nav {
@@ -44,39 +44,62 @@ nav ul {
 nav ul li {
     display: block;
     text-align: center;
-
     padding: 20px;
 }
 
-nav ul li a {
+.nav-links ul li a {
     text-decoration: none;
     color: #c78c06;
     vertical-align: middle;
 }
 
-nav ul li:hover {
+.nav-links ul li:hover {
     background-color: #c78c06;
+    color: #222222;
 }
 
-nav ul li a:hover,
-a:active {
+.nav-links ul li a:hover {
     color: #222222;
+}
+
+.search {
+    width: 100%;
 }
 
 .nav input[type=text] {
     padding: 6px;
-    width: 90%;
+    width: 100%;
     font-size: 18px;
 }
 
-.nav .search-container button {
-    float: right;
-    padding: 6px 10px;
-    background: #000;
-    font-size: 18px;
-    border: solid 1px #c78c06;
-    color: #c78c06;
+.search-container input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 90%;
+    background: #f1f1f1;
+    border-radius: 3px;
 }
+
+.search-container button {
+    float: right;
+    width: 10%;
+    padding: 8px 15px;
+    background: #222;
+    color: #c78c06;
+    font-size: 20px;
+    border: 1px solid #c78c06;
+    cursor: pointer;
+}
+
+
+form.search-container::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
 
 .welcome {
     position: relative;
@@ -106,7 +129,7 @@ a:active {
 }
 
 .yellow-btn {
-    padding: 20px;
+    padding: 15px 30px;
     background-color: #c78c06;
     display: inline-block;
     font-size: 1.2rem;
@@ -119,7 +142,6 @@ a:active {
 
 .aboutus {
     background-color: #ffe6ac;
-    padding: 15px;
 }
 
 .aboutus img {
@@ -127,7 +149,7 @@ a:active {
 }
 
 .ourservices {
-    padding: 20px;
+    padding: 20px 20px 0 20px;
 }
 
 .services-text {
@@ -145,7 +167,7 @@ a:active {
 }
 
 .black-btn {
-    padding: 20px 30px;
+    padding: 10px 30px;
     background-color: #222;
     display: inline-block;
     font-size: 1.2rem;
@@ -172,12 +194,12 @@ a:active {
 }
 
 .wrapper {
-    padding: 15px;
+    padding: 20px;
 }
 
 .blue-btn {
     padding: 10px 30px;
-    background-image: linear-gradient(to right, #0F1828 , #1C2B42);
+    background-image: linear-gradient(to right, #0F1828, #1C2B42);
     display: inline-block;
     border: 1px solid #c78c06;
     font-size: 1.2rem;
@@ -188,11 +210,42 @@ a:active {
     text-decoration: none;
 }
 
+.ourteam {
+    padding: 20px 20px 0 20px;
+}
+
+.ourteam img {
+    width: 100%;
+    height: auto;
+    margin: 20px 0 0 0;
+    padding: 0;
+    display: block;
+}
+
+.johntable div:last-child,
+.bobtable div:last-child {
+    background-color: #ffe6ac;
+    padding: 15px;
+    margin: 0 0 20px 0;
+}
+
+.ourteam h4 {
+    margin: 5px 0 0 0;
+}
+
+.ourteam hr {
+    background-color: #c78c06;
+    height: 2px;
+    border: none;
+}
+
 .contact {
     padding: 20px;
 }
 
-.contact #fullname, #email, textarea{
+.contact #fullname,
+#email,
+textarea {
     width: 100%;
     margin-top: 5px;
     margin-bottom: 10px;
@@ -213,11 +266,17 @@ a:active {
     font-size: 1.3rem;
 }
 
+.contactus,
+.hours-operation,
 .hours {
- border: 1px solid #000;
- border-collapse: collapse;
- width: 100%;
- font-size: 0.9rem;
+    margin: 20px 0;
+}
+
+.hours {
+    border: 1px solid #000;
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 0.9rem;
 }
 
 .hours th {
@@ -245,7 +304,11 @@ a:active {
     border: 0;
 }
 
-footer { 
+.links {
+    color: #c78c06;
+}
+
+footer {
     background-color: #222222;
     color: #c78c06;
     padding: 15px 10px 5px 10px;
@@ -253,10 +316,19 @@ footer {
 }
 
 @media screen and (min-width: 760px) {
-    .nav, .nav ul {
+    .container {
+        max-width: 1200px;
+    }
+
+    .wrapper { 
+        padding: 10px 70px;
+    }
+
+    .nav,
+    .nav ul {
         display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+        flex-direction: row;
+        justify-content: space-between;
     }
 
     .nav-logo {
@@ -267,25 +339,105 @@ footer {
         margin: 0 130px;
         padding-right: 170px;
     }
-
-    .aboutus > .wrapper {
-        display: flex;
-    flex-direction: row;
-    padding: 0 100px;
+    
+    .contact {
+        padding: 10px 80px;
+        max-width: 1200px;
     }
 
-    .aboutus img { 
-        width: 30%;
+    
+
+    .aboutus > .wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+    }
+
+    .aboutus > .wrapper img  {
+        float: left;
     }
 
     .container-padding {
-        width: 100%;
-        padding: 0 30px;
+        padding: 10px 70px;
+        max-width: 1200px;
+    } 
+
+    .services {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+          "s1 s1 s1 s2 s2 s2"
+          "s3 s3 s4 s4 s5 s5"
+          ;
     }
 
-    .services-twoc {
-        display: flex;
-        flex-direction: row;
-        width: 60%;
+    .services .digital-transformation {
+        grid-area: s1;
     }
+    
+    .services .marketing{
+        grid-area: s2;
+    }
+    
+    .services .video {
+        grid-area: s3;
+    }
+    
+    .services .webdev{
+        grid-area: s4;
+    }
+    
+    .services .print {
+        grid-area: s5;
+    }
+
+    .services-text {
+        margin: 0 0 0 0;
+    }
+
+    .johntable div:last-child,
+    .bobtable div:last-child {
+        margin: 0;
+    }
+
+    .ourteam img {
+        margin: 0;
+        
+    }
+        
+    .ourteam .johntable {
+        display: grid;
+        grid-template-columns: 50% 1fr;
+        grid-template-areas:
+          "j1 j2"
+          ;
+    }
+
+    .johntable .johnrow:nth-child(1) {
+        grid-area: j1;
+    }
+    
+    .johntable .johnrow:nth-child(2) {
+        grid-area: j2;
+    }
+
+    .ourteam .bobtable {
+        display: grid;
+        grid-template-columns: 50% 1fr;
+        grid-template-areas:
+          "b2 b1"
+          ;
+    }
+
+    .bobtable .bobrow:nth-child(1) {
+        grid-area: b1;
+    }
+    
+    .bobtable .bobrow:nth-child(2) {
+        grid-area: b2;
+    } 
+    
+   
 }
