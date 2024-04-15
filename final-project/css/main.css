@@ -55,21 +55,14 @@ nav ul li {
 
 .nav-links ul li:hover {
     background-color: #c78c06;
-    color: #222222;
 }
 
-.nav-links ul li a:hover {
+.nav-links ul li:hover a {
     color: #222222;
 }
 
 .search {
     width: 100%;
-}
-
-.nav input[type=text] {
-    padding: 6px;
-    width: 100%;
-    font-size: 18px;
 }
 
 .search-container input[type=text] {
@@ -85,7 +78,7 @@ nav ul li {
 .search-container button {
     float: right;
     width: 10%;
-    padding: 8px 15px;
+    padding: 8px;
     background: #222;
     color: #c78c06;
     font-size: 20px;
@@ -149,7 +142,7 @@ form.search-container::after {
 }
 
 .ourservices {
-    padding: 20px 20px 0 20px;
+    padding: 20px 0 0 0;
 }
 
 .services-text {
@@ -211,7 +204,7 @@ form.search-container::after {
 }
 
 .ourteam {
-    padding: 20px 20px 0 20px;
+    padding: 20px 0 0 0;
 }
 
 .ourteam img {
@@ -340,13 +333,6 @@ footer {
         padding-right: 170px;
     }
     
-    .contact {
-        padding: 10px 80px;
-        max-width: 1200px;
-    }
-
-    
-
     .aboutus > .wrapper {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -357,7 +343,8 @@ footer {
         float: left;
     }
 
-    .container-padding {
+    .container-padding,
+    .contact {
         padding: 10px 70px;
         max-width: 1200px;
     } 
@@ -439,5 +426,27 @@ footer {
         grid-area: b2;
     } 
     
+    .contact {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr ;
+        grid-template-areas:
+          "sm1 gm3"
+          "o2 o2"
+          ;
+    }
+
+    .sendmessage {
+        grid-area: sm1;
+    }
+    
+    .hours-operation {
+        grid-area: o2;
+    }
+    
+    .location {
+        grid-area: gm3;
+    }
    
 }
