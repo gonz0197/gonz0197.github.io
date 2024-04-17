@@ -2,6 +2,7 @@
     box-sizing: border-box;
 }
 
+/* body tag for font family, font weight and font style */
 
 body {
     margin: 0 auto;
@@ -9,6 +10,8 @@ body {
     font-weight: 400;
     font-style: normal;
 }
+
+/* css for title tags, h1 with 4rem, h2 3 rem, h3 2rem */
 
 h1 {
     color: white;
@@ -18,7 +21,7 @@ h1 {
 
 h2 {
     font-size: 3rem;
-    margin: 0;
+    margin: 20px 0;
 }
 
 h3 {
@@ -26,25 +29,55 @@ h3 {
     margin: 0 0 20px 0;
 }
 
-.nav {
+/* css for header, header is #222 color, with a 100% width and a padding for top and bottom of 10px */
+
+header {
     background-color: #222222;
-    padding: 10px;
+    width: 100%;
+    padding: 10px 0 10px 0;
+}
+
+/* nav starts */
+
+/* nav with a display flex and flex direction of column, margin 0 auto to center the whole element. the nav-logo will have a relative position with a width of 100% and a height of 80px and it will have a background color of c78c06, the serach bar will be small on desktop but 100% in mobile */
+
+/* nav section with five ul elements without bullets in column with a hover color and a class .active for home  */
+
+.nav {
+    width: 96%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .nav-logo {
+    position: relative;
+    width: 100%;
+    height: 80px;
     background-color: #c78c06;
 }
 
-/* nav section with three ul elements without bullets */
 nav ul {
     padding: 0;
     margin: 0;
 }
 
-nav ul li {
-    display: block;
+.nav-links {
+    width: 100%;
+}
+
+.nav-links ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-links ul li {
+    position: relative;
     text-align: center;
-    padding: 20px;
+    padding: 20px 40px 20px 40px;
+    width: 100%;
+    list-style: none;
+    cursor: pointer;
 }
 
 .nav-links ul li a {
@@ -61,29 +94,48 @@ nav ul li {
     color: #222222;
 }
 
+.nav-links ul li.active {
+    background-color: #c78c06;
+}
+
+.nav-links ul li.active a {
+    color: #222222;
+}
+
+/* search bar starts */
+
+/* search form with a display:flex, the box will have a padding of 10px. The button will have an magnifying glass icon with a color #c78c06 and a border of 1px solid with the same color. The display will be flex with align items and justify content to the center  */
+
 .search {
+    position: relative;
     width: 100%;
+}
+
+.search form {
+    display: flex;
 }
 
 .search-container input[type=text] {
     padding: 10px;
     font-size: 17px;
     border: 1px solid grey;
-    float: left;
-    width: 90%;
+    width: calc(100% - 40px);
+    height: 40px;
     background: #f1f1f1;
     border-radius: 3px;
 }
 
 .search-container button {
-    float: right;
-    width: 10%;
-    padding: 8px;
     background: #222;
     color: #c78c06;
     font-size: 20px;
     border: 1px solid #c78c06;
     cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -93,6 +145,9 @@ form.search-container::after {
     display: table;
 }
 
+/* welcome block starts */
+
+/* this block will have a background image with a no repeat background, cover size, and center position. on top of the background image there will be a blackblock with an opacity around 40%. The position will be relative with an auto height */
 
 .welcome {
     position: relative;
@@ -110,12 +165,14 @@ form.search-container::after {
 }
 
 .blackblock {
-    padding: 15px;
+    padding: 20px;
     position: relative;
     width: 100%;
     height: auto;
     background-color: #000000b2;
 }
+
+/* Inside the blackblock there will be white text and yellow button  */
 
 .white-text {
     color: #fff;
@@ -133,6 +190,10 @@ form.search-container::after {
     text-decoration: none;
 }
 
+/* about us section starts */
+
+/* about us pale yellow block, image at the left in desktop and at the top for mobile, the text will be black  */
+
 .aboutus {
     background-color: #ffe6ac;
 }
@@ -141,9 +202,13 @@ form.search-container::after {
     width: 100%;
 }
 
+/* our services section starts*/
+
 .ourservices {
-    padding: 20px 0 0 0;
+    padding: 20px 0 20px 0;
 }
+
+/* this section has 6 divs with an image and text with a backgroud color, in mobile they are all in a single column, but in desktop it will need a grid display of 6 columns, the first row will have 2 divs and the second row will have 3 divs  */
 
 .services-text {
     background-color: #ffe6ac;
@@ -159,6 +224,8 @@ form.search-container::after {
     display: block;
 }
 
+/* inside the divs there is a black button  */
+
 .black-btn {
     padding: 10px 30px;
     background-color: #222;
@@ -170,6 +237,10 @@ form.search-container::after {
     color: #fff;
     text-decoration: none;
 }
+
+/* our vision section starts */
+
+/* our vision will have a background image, with a no repeat background, a cover size and a center position. This will not have a bleed at the sides. Inside the block there is white text and a button with a gradient  */
 
 .ourvision {
     position: relative;
@@ -186,10 +257,6 @@ form.search-container::after {
     padding: 0;
 }
 
-.wrapper {
-    padding: 20px;
-}
-
 .blue-btn {
     padding: 10px 30px;
     background-image: linear-gradient(to right, #0F1828, #1C2B42);
@@ -202,6 +269,18 @@ form.search-container::after {
     color: #fff;
     text-decoration: none;
 }
+
+/* this padding is for mobile view only  */
+
+.wrapper,
+.container-padding,
+.contact {
+    padding: 20px;
+}
+
+/* Our team section starts */
+
+/* For mobile the our team section has a div table, with 4 columns. First the image and then a yellow block with text, for desktop the div table has 2 columns and 2 rows and it will use grid to fit the blocks in different views  */
 
 .ourteam {
     padding: 20px 0 0 0;
@@ -232,9 +311,9 @@ form.search-container::after {
     border: none;
 }
 
-.contact {
-    padding: 20px;
-}
+/* Contact us section starts */
+
+/* this section will have a form, a map and a div table with information about the hours of operation. In mobile its all in a single column but in desktop the form and the map will be side by side and the div table will the at the end at 100% */
 
 .contact #fullname,
 #email,
@@ -259,10 +338,8 @@ textarea {
     font-size: 1.3rem;
 }
 
-.contactus,
-.hours-operation,
-.hours {
-    margin: 20px 0;
+.hours-operation {
+    margin: 40px 0 0 0;
 }
 
 .hours {
@@ -290,7 +367,6 @@ textarea {
     padding: 15px;
 }
 
-
 .map iframe {
     width: 100%;
     height: 450px;
@@ -301,81 +377,144 @@ textarea {
     color: #c78c06;
 }
 
+/* footer section starts */
+
+/* black footer with golden text, it has a link to Unsplash */
+
 footer {
     background-color: #222222;
     color: #c78c06;
-    padding: 15px 10px 5px 10px;
     font-size: 0.9rem;
+    padding: 20px 20px 10px 20px;
 }
 
+/* media query min-width 760px starts */
+
 @media screen and (min-width: 760px) {
-    .container {
+    header {
+        padding: 20px 0 20px 0;
+    }
+
+    /* .wrapper sets the max width for the content container  */
+
+    .wrapper {
         max-width: 1200px;
+        margin: 0 auto;
+        padding: 16px 0 25px 0;
     }
 
-    .wrapper { 
-        padding: 10px 70px;
+    /* This classes adds the top and bottom padding  */
+
+    .wrapper,
+    .container-padding,
+    .contact {
+        padding: 20px 0;
     }
 
-    .nav,
-    .nav ul {
-        display: flex;
+    /* nav section desktop starts  */
+
+    /* the nav is in a row direction and its center aligned, the .nav-links will have a calc width minus the logo and the search box  */
+
+    .nav {
+        max-width: 1200px;
         flex-direction: row;
+        align-items: center;
+    }
+
+    .nav-links {
+        width: 100%;
+        width: calc(100% - 300px);
+    }
+
+    /* links will be in a row direction with a justify-content space-between  */
+
+    .nav-links ul {
+        flex-direction: row;
+        margin-left: 5%;
+        margin-right: 4%;
         justify-content: space-between;
     }
 
-    .nav-logo {
-        background-color: none;
+    .nav-links ul li {
+        padding: 16px 0 16px 0;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        width: 20%;
     }
+
+    .nav-logo {
+        position: relative;
+        width: 80px;
+        height: 80px;
+    }
+
+    .nav-logo img {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    .search {
+        position: relative;
+        width: 100%;
+        width: 220px;
+    }
+
+    /* the black block will have a max width of 1200px  */
 
     .blackblock {
-        margin: 0 130px;
-        padding-right: 170px;
-    }
-    
-    .aboutus > .wrapper {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 10px;
+        max-width: 1200px;
     }
 
-    .aboutus > .wrapper img  {
+    /* about us section will have a grid display  */
+
+    .aboutus>.wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 16px;
+    }
+
+    .aboutus>.wrapper img {
         float: left;
     }
 
     .container-padding,
     .contact {
-        padding: 10px 70px;
         max-width: 1200px;
-    } 
+        margin: 0 auto;
+    }
+
+    /* our services section starts  */
+
+    /* for the desktop version, .services will have a display grid and a grid template areas to put 2 rows */
 
     .services {
         display: grid;
         grid-gap: 10px;
         grid-template-columns: repeat(6, 1fr);
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 1fr;
         grid-template-areas:
-          "s1 s1 s1 s2 s2 s2"
-          "s3 s3 s4 s4 s5 s5"
-          ;
+            "s1 s1 s1 s2 s2 s2"
+            "s3 s3 s4 s4 s5 s5"
+        ;
     }
 
     .services .digital-transformation {
         grid-area: s1;
     }
-    
-    .services .marketing{
+
+    .services .marketing {
         grid-area: s2;
     }
-    
+
     .services .video {
         grid-area: s3;
     }
-    
-    .services .webdev{
+
+    .services .webdev {
         grid-area: s4;
     }
-    
+
     .services .print {
         grid-area: s5;
     }
@@ -384,6 +523,10 @@ footer {
         margin: 0 0 0 0;
     }
 
+    /* our team section starts */
+
+    /* for desktop the div tables will be in two rows. the images needs to be in diagonal sides. I'll use grid display  */
+
     .johntable div:last-child,
     .bobtable div:last-child {
         margin: 0;
@@ -391,21 +534,20 @@ footer {
 
     .ourteam img {
         margin: 0;
-        
     }
-        
+
     .ourteam .johntable {
         display: grid;
         grid-template-columns: 50% 1fr;
         grid-template-areas:
-          "j1 j2"
-          ;
+            "j1 j2"
+        ;
     }
 
     .johntable .johnrow:nth-child(1) {
         grid-area: j1;
     }
-    
+
     .johntable .johnrow:nth-child(2) {
         grid-area: j2;
     }
@@ -414,39 +556,54 @@ footer {
         display: grid;
         grid-template-columns: 50% 1fr;
         grid-template-areas:
-          "b2 b1"
-          ;
+            "b2 b1"
+        ;
     }
 
     .bobtable .bobrow:nth-child(1) {
         grid-area: b1;
     }
-    
+
     .bobtable .bobrow:nth-child(2) {
         grid-area: b2;
-    } 
-    
+    }
+
+    /* contact section starts */
+
+    /* contact sections will have a grid display, grid gap, template columns in repeat, template rows and a template area to modify the set up since the view is different from mobile. */
     .contact {
         display: grid;
         grid-gap: 10px;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 1fr ;
+        grid-template-rows: 1fr;
         grid-template-areas:
-          "sm1 gm3"
-          "o2 o2"
-          ;
+            "us1 us1"
+            "sm1 gm3"
+            "o2 o2"
+        ;
+    }
+
+    .us {
+        grid-area: us1;
     }
 
     .sendmessage {
         grid-area: sm1;
     }
-    
+
     .hours-operation {
         grid-area: o2;
     }
-    
+
     .location {
         grid-area: gm3;
     }
-   
+
+    /* footer with a max width of 1200px */
+
+    footer div {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
 }
